@@ -1,0 +1,45 @@
+{
+  "version": "4.0.2-e0",
+  "fields": [
+    {
+      "key": "direction_change_delay",
+      "label": "Movement Delay",
+      "group": "Top Down 2D RPG Movement",
+      "type": "slider",
+      "cType": "UWORD",
+      "defaultValue": 8,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "key": "INPUT_TOPDOWN_RPG_INTERACT",
+      "label": "Interact Button",
+      "group": "Top Down 2D RPG Movement",
+      "type": "select",
+      "options": [
+        ["INPUT_A", "A"],
+        ["INPUT_B", "B"]
+      ],
+      "cType": "define",
+      "defaultValue": "INPUT_A"
+    },
+    {
+      "key": "topdown_rpg_grid",
+      "label": "Grid Size",
+      "group": "Top Down 2D RPG Movement",
+      "type": "select",
+      "options": [
+        [8, "FIELD_GRID_8PX"],
+        [16, "FIELD_GRID_16PX"]
+      ],
+      "cType": "UBYTE",
+      "defaultValue": 8
+    }
+  ],
+  "sceneTypes": [
+    {
+      "key": "topdown_rpg",
+      "label": "Top Down 2D RPG Movement"
+    }
+  ]
+}
