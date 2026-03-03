@@ -544,75 +544,6 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_SET_TIMER_SCRIPT",
-                    "args": {
-                        "duration": 0.1,
-                        "frames": 30,
-                        "__scriptTabs": "end",
-                        "__collapse": true,
-                        "__label": "HOLD (A) TO RUN",
-                        "timer": 1
-                    },
-                    "children": {
-                        "script": [
-                            {
-                                "command": "EVENT_IF_INPUT",
-                                "args": {
-                                    "input": [
-                                        "a"
-                                    ],
-                                    "__collapseElse": false,
-                                    "__collapse": true
-                                },
-                                "children": {
-                                    "true": [
-                                        {
-                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 2,
-                                                "__collapse": true
-                                            },
-                                            "id": "f60e6035-ae7e-4e2a-87f7-ca3798401ae5"
-                                        },
-                                        {
-                                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 7,
-                                                "__collapse": true
-                                            },
-                                            "id": "86c502bd-0ef0-4ecc-843c-804b3ae04ddd"
-                                        }
-                                    ],
-                                    "false": [
-                                        {
-                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 1,
-                                                "__collapse": true
-                                            },
-                                            "id": "e7bde675-1033-4f3d-8f06-9fd5437f1495"
-                                        },
-                                        {
-                                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 15,
-                                                "__collapse": true
-                                            },
-                                            "id": "7ee9a613-5442-4751-8236-a0e2d3bd5a5c"
-                                        }
-                                    ]
-                                },
-                                "id": "c82a7063-82f5-4980-a58a-c79d476e118d"
-                            }
-                        ]
-                    },
-                    "id": "3a93bd13-60dc-4c35-8d28-9b59a73baae7"
-                },
-                {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
                         "customEventId": "34f3a0be-1e32-4119-b058-5178d2b4cc4a"
@@ -8929,9 +8860,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 569,
-        "worldScrollY": 883,
-        "zoom": 375,
+        "worldScrollX": 50,
+        "worldScrollY": 0,
+        "zoom": 75,
         "sgbEnabled": false,
         "customHead": "",
         "defaultBackgroundPaletteIds": [
@@ -8958,9 +8889,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            160,
-            455,
-            30
+            198,
+            205,
+            242
         ],
         "showNavigator": true,
         "defaultFontId": "1ccd3719-247f-4ebd-bab6-0223636a67cd",

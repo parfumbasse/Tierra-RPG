@@ -487,7 +487,7 @@
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "44a16440-55b6-4475-96eb-49326b074886",
+                    "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
                     "direction": "down",
                     "moveSpeed": 1,
                     "animSpeed": 15,
@@ -518,11 +518,11 @@
                                 "sceneId": "85320d67-da1d-4ffa-8001-46d9e002a75d",
                                 "x": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 15
                                 },
                                 "y": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 11
                                 },
                                 "direction": "",
                                 "fadeSpeed": "2",
@@ -543,75 +543,6 @@
             ],
             "triggers": [],
             "script": [
-                {
-                    "command": "EVENT_SET_TIMER_SCRIPT",
-                    "args": {
-                        "duration": 0.1,
-                        "frames": 30,
-                        "__scriptTabs": "end",
-                        "__collapse": true,
-                        "__label": "HOLD (A) TO RUN",
-                        "timer": 1
-                    },
-                    "children": {
-                        "script": [
-                            {
-                                "command": "EVENT_IF_INPUT",
-                                "args": {
-                                    "input": [
-                                        "a"
-                                    ],
-                                    "__collapseElse": false,
-                                    "__collapse": true
-                                },
-                                "children": {
-                                    "true": [
-                                        {
-                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 2,
-                                                "__collapse": true
-                                            },
-                                            "id": "f60e6035-ae7e-4e2a-87f7-ca3798401ae5"
-                                        },
-                                        {
-                                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 7,
-                                                "__collapse": true
-                                            },
-                                            "id": "86c502bd-0ef0-4ecc-843c-804b3ae04ddd"
-                                        }
-                                    ],
-                                    "false": [
-                                        {
-                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 1,
-                                                "__collapse": true
-                                            },
-                                            "id": "e7bde675-1033-4f3d-8f06-9fd5437f1495"
-                                        },
-                                        {
-                                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                                            "args": {
-                                                "actorId": "$self$",
-                                                "speed": 15,
-                                                "__collapse": true
-                                            },
-                                            "id": "7ee9a613-5442-4751-8236-a0e2d3bd5a5c"
-                                        }
-                                    ]
-                                },
-                                "id": "c82a7063-82f5-4980-a58a-c79d476e118d"
-                            }
-                        ]
-                    },
-                    "id": "3a93bd13-60dc-4c35-8d28-9b59a73baae7"
-                },
                 {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
@@ -1002,23 +933,38 @@
             "symbol": "scene_2",
             "x": 360,
             "y": 88,
-            "actors": [],
-            "triggers": [],
-            "script": [
+            "actors": [
                 {
-                    "command": "EVENT_ACTOR_HIDE",
-                    "args": {
-                        "actorId": "player",
-                        "__collapse": true
-                    },
-                    "id": "47957bd6-2620-4056-b500-053019e8bf2d"
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_4",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "5477c84b-bf98-43cd-923e-a7647a037e49",
+                    "x": 3,
+                    "y": 3
                 }
             ],
+            "triggers": [],
+            "script": [],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "playerSpriteSheetId": "44a16440-55b6-4475-96eb-49326b074886",
-            "autoFadeEventCollapse": true
+            "playerSpriteSheetId": "b8408af2-b524-4239-a3b7-5f09653f3dff",
+            "autoFadeEventCollapse": false
         },
         {
             "name": "Battle Scene Enemy 2",
@@ -8914,9 +8860,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 1249,
-        "worldScrollY": 374,
-        "zoom": 375,
+        "worldScrollX": 0,
+        "worldScrollY": 0,
+        "zoom": 25,
         "sgbEnabled": false,
         "customHead": "",
         "defaultBackgroundPaletteIds": [
@@ -8943,9 +8889,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            160,
-            455,
-            30
+            198,
+            205,
+            242
         ],
         "showNavigator": true,
         "defaultFontId": "1ccd3719-247f-4ebd-bab6-0223636a67cd",
