@@ -412,11 +412,6 @@
                                 "__collapse": true
                             },
                             "id": "a055b861-f829-4f28-b630-6ff8ae60fe26"
-                        },
-                        {
-                            "command": "EVENT_SCENE_PUSH_STATE",
-                            "args": {},
-                            "id": "b6b1a88d-722b-4bad-8ce5-23f79eb84986"
                         }
                     ],
                     "startScript": [],
@@ -459,11 +454,6 @@
                                 "__collapse": true
                             },
                             "id": "6f1474a0-952b-42e2-ba6b-e657f3f37709"
-                        },
-                        {
-                            "command": "EVENT_SCENE_PUSH_STATE",
-                            "args": {},
-                            "id": "89cd8750-5ce4-4a33-bacc-fd7be475e1bd"
                         }
                     ],
                     "startScript": [],
@@ -506,11 +496,6 @@
                                 "__collapse": true
                             },
                             "id": "1b41f4d7-f59c-43cc-aa98-34c92a4ddfef"
-                        },
-                        {
-                            "command": "EVENT_SCENE_PUSH_STATE",
-                            "args": {},
-                            "id": "b72f3b4a-35dc-4a68-b355-b4795e86a4bd"
                         }
                     ],
                     "startScript": [],
@@ -1316,7 +1301,7 @@
             "y": 88,
             "actors": [
                 {
-                    "name": "Enemy 1",
+                    "name": "Enemy 1 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -1330,7 +1315,70 @@
                     "symbol": "actor_4",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "3a259007-45e3-4d8d-9363-9cdf006ff91c"
+                                        },
+                                        "id": "02625f72-e611-42b7-a25d-b4c60793b69d"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "c5544f7e-9852-4da2-a9ab-7a8bbb9df497"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "d3693fc2-6329-482e-a7dc-32eb290a77f9"
+                                        },
+                                        "id": "c116089a-8464-4e1f-a5d8-dac50083b34b"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "5ea65a1b-0fd4-4a95-8b43-b1c0e944b861"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -1801,7 +1849,7 @@
             "y": 88,
             "actors": [
                 {
-                    "name": "Enemy 2",
+                    "name": "Enemy 2 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -1815,7 +1863,72 @@
                     "symbol": "actor_5",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "7d70d2db-356f-410f-abfc-66cdc239a3b8",
+                                            "__collapse": true
+                                        },
+                                        "id": "b26e030a-2a1d-48fe-ad9d-25da17d12c23"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "3a79cfaa-e7a1-420f-8811-be5e02250e7c"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "90fdfecc-c483-41f0-b2d1-21807eeacf09",
+                                            "__collapse": true
+                                        },
+                                        "id": "be9241ed-4538-414c-b146-aa1e2fff6e52"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "8f4d28bc-ccc6-4d02-9309-be0955df6734"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -2286,7 +2399,7 @@
             "y": 272,
             "actors": [
                 {
-                    "name": "Enemy 4",
+                    "name": "Enemy 4 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -2300,7 +2413,71 @@
                     "symbol": "actor_7",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "f5e5a170-c405-4d41-93b9-a281484cf773",
+                                            "__collapse": true
+                                        },
+                                        "id": "0031fb43-7a21-46a0-8b4f-4e5005c58ae5"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "677401e7-60c6-4cd9-bc5f-9f977dd80774"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "bc4cadce-c887-48be-86e9-9574fcc36575"
+                                        },
+                                        "id": "e6d6bbe5-c5be-461f-8cda-85be5c0c886a"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "baa4cf13-d0b2-406c-8bfd-241d2d2c08ac"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -2771,7 +2948,7 @@
             "y": 272,
             "actors": [
                 {
-                    "name": "Enemy 5",
+                    "name": "Enemy 5 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -2785,7 +2962,72 @@
                     "symbol": "actor_8",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "d6b5472c-8c0a-4df8-a2d3-757940ce30d3",
+                                            "__collapse": true
+                                        },
+                                        "id": "2f2149b9-4afb-4557-9792-e5a1e578c2f6"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "73784c21-9df4-4b25-a388-a760fa120092"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "f028f464-bb9b-4aa2-b1b2-a8f983efbf00",
+                                            "__collapse": true
+                                        },
+                                        "id": "2694d305-2b35-4b46-a72f-b47a432a2b7f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "e30ab5f9-e9a1-4a55-92b3-ba3b24c0d590"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -3256,7 +3498,7 @@
             "y": 88,
             "actors": [
                 {
-                    "name": "Enemy 3",
+                    "name": "Enemy 3 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -3270,7 +3512,70 @@
                     "symbol": "actor_6",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "59d95245-77f3-4f67-b888-f1d2a735ef71"
+                                        },
+                                        "id": "0095631e-cec8-42de-a213-b4bd2b6956b2"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "98faae16-c047-479f-a406-550c24659a09"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "4641697c-097a-4774-9c7f-5c1b726f90c9"
+                                        },
+                                        "id": "7dd6379b-6c1c-42a0-8821-1fc6b3d3c160"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "b4e66e2b-0d64-47f7-915f-35ad4564c471"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -3741,7 +4046,7 @@
             "y": 272,
             "actors": [
                 {
-                    "name": "Enemy 6",
+                    "name": "Enemy 6 Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -3755,7 +4060,72 @@
                     "symbol": "actor_9",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "fb578623-87b7-49a5-8d43-54c76d87c3a2",
+                                            "__collapse": true
+                                        },
+                                        "id": "0f87651c-784c-47d6-beb3-7bcd09497f03"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "7051433c-56f5-4e3c-9390-6eb6cdc8a1e1"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "88909463-3225-47cb-9876-b8cc761ccff7",
+                                            "__collapse": true
+                                        },
+                                        "id": "8948613a-5d7f-45c4-a717-899fc2fdcfd8"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "16fd90a4-5725-424c-a6c2-ee0b89d3e9d2"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -4226,7 +4596,7 @@
             "y": 272,
             "actors": [
                 {
-                    "name": "Boss",
+                    "name": "Boss Battle Controller",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "81e1db2e-30b1-4bc9-9dd0-dc2125f55f5b",
@@ -4240,7 +4610,70 @@
                     "symbol": "actor_10",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "f6a515bb-c11f-4bff-a047-4bfd5aebadb7"
+                                        },
+                                        "id": "5624b2e5-27d1-480e-b3ee-eee414d5b432"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "7f23dbcb-ba22-41e6-a944-30f4507f2a06"
+                        },
+                        {
+                            "command": "EVENT_IF",
+                            "args": {
+                                "condition": {
+                                    "type": "eq",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "42"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 2
+                                    }
+                                },
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "5837d275-ce0a-49a7-b1e5-3af0bedf2e1e"
+                                        },
+                                        "id": "61c1a760-c6dc-4f62-89e3-84e79406e4eb"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "e5f900be-8656-4800-b440-3464ef4db3f7"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -5612,6 +6045,23 @@
                         "__collapse": true
                     },
                     "id": "83efb685-d47f-42b8-ae3e-3a9d5b7532dc"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "5b1f7d3e-d2ca-4296-a72b-c10fad3dbaed",
+                        "x": {
+                            "type": "number",
+                            "value": 13
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 5
+                        },
+                        "direction": "right",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "9095e1b0-bee4-42b2-9bdc-6ca4db9882e3"
                 }
             ],
             "playerHit1Script": [],
@@ -6016,6 +6466,23 @@
                         "__collapse": true
                     },
                     "id": "f480c53c-6d96-452e-8e04-0b43865ea652"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "5b1f7d3e-d2ca-4296-a72b-c10fad3dbaed",
+                        "x": {
+                            "type": "number",
+                            "value": 13
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 8
+                        },
+                        "direction": "right",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "75f7ec84-57b2-4aec-a42d-e80094cb9ad9"
                 }
             ],
             "playerHit1Script": [],
@@ -6420,6 +6887,23 @@
                         "__collapse": true
                     },
                     "id": "5981a5bc-bab0-475e-864d-083b9f9e778f"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "5b1f7d3e-d2ca-4296-a72b-c10fad3dbaed",
+                        "x": {
+                            "type": "number",
+                            "value": 13
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 11
+                        },
+                        "direction": "right",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "3f3e1516-6649-4f51-964e-71f423b735df"
                 }
             ],
             "playerHit1Script": [],
@@ -10579,7 +11063,7 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "23",
+                        "variable": "51",
                         "value": {
                             "type": "number",
                             "value": 10
@@ -10683,7 +11167,7 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "27",
+                        "variable": "32",
                         "value": {
                             "type": "number",
                             "value": 10
@@ -10695,7 +11179,7 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "25",
+                        "variable": "30",
                         "value": {
                             "type": "number",
                             "value": 10
@@ -10707,7 +11191,7 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "28",
+                        "variable": "34",
                         "value": {
                             "type": "number",
                             "value": 10
@@ -10719,7 +11203,7 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "29",
+                        "variable": "33",
                         "value": {
                             "type": "number",
                             "value": 10
@@ -10731,10 +11215,10 @@
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
-                        "variable": "26",
+                        "variable": "31",
                         "value": {
                             "type": "variable",
-                            "value": "27"
+                            "value": "32"
                         },
                         "__collapse": true
                     },
@@ -10881,6 +11365,300 @@
                         "choices": 2,
                         "__collapseCase0": true,
                         "value0": 1,
+                        "__collapseCase1": false,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": false,
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda ataca al enemigo!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "7877be3b-6a6d-4ce7-bfd4-00d76fcce753"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "44",
+                                    "expression": "$02$ - ($07$ / 2)",
+                                    "__collapse": true
+                                },
+                                "id": "981f7162-2aed-4261-ae87-a5f73d22a0de"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 0.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 3
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "56a17605-a4a0-4944-9b12-1db32110dfdc"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "6",
+                                    "expression": "$06$ - $44$",
+                                    "__collapse": false
+                                },
+                                "id": "e618827e-c021-495b-8df0-bef521352ba5"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda causó $44$ \npuntos de daño!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": false
+                                },
+                                "id": "734dd15f-488f-4c84-8e83-8e95774bd78d"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "f34f0a1f-8cce-4fee-91e3-8a7ac311aa3d"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": false
+                                            },
+                                            "id": "d0e4ccd5-d748-41fa-bce3-f36fe3662726"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": false
+                                            },
+                                            "id": "38a29090-1280-4039-bced-970f75e9d517"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "98b5a93a-cebc-4579-ac93-88ba79bbc176"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "e92626c2-03e9-410c-9b49-5a907b7defdf"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": false
+                                },
+                                "id": "f5d8374f-032d-4535-94e3-6773d16b4659"
+                            }
+                        ],
+                        "true2": [],
+                        "true3": [],
+                        "true4": [],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "3a259007-45e3-4d8d-9363-9cdf006ff91c"
+                                },
+                                "id": "151c927b-29af-4070-b763-61bbb44c9d05"
+                            }
+                        ]
+                    },
+                    "id": "3909d57b-c563-4a8e-8d87-4fce8abb4df2"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "6"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda derrotó al\nenemigo!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "f64526dc-ac9d-462a-8b8c-72e7bf60345e"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "896c2275-e45b-43c8-864f-232d157a6fa7"
+                            }
+                        ]
+                    },
+                    "id": "eb38ee58-d882-4f60-a3ca-c1934acd1a05"
+                }
+            ]
+        },
+        {
+            "id": "d3693fc2-6329-482e-a7dc-32eb290a77f9",
+            "name": "Turn_Enemy1",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_11",
+            "script": []
+        },
+        {
+            "id": "7d70d2db-356f-410f-abfc-66cdc239a3b8",
+            "name": "Turn_Amanda_Enemy2",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_12",
+            "script": [
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "43",
+                        "items": 2,
+                        "option1": "Enfrentar",
+                        "option2": "Correr!",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "cancelOnLastOption": false,
+                        "__collapse": true
+                    },
+                    "id": "9d5f94e8-7a8a-4903-8b3e-e587420b00a6"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "43",
+                        "choices": 2,
+                        "__collapseCase0": true,
+                        "value0": 1,
                         "__collapseCase1": true,
                         "value1": 2,
                         "__collapseCase2": false,
@@ -10912,7 +11690,7 @@
                         "__collapseCase15": false,
                         "value15": 16,
                         "__collapseElse": true,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true0": [
@@ -10925,16 +11703,16 @@
                                     "avatarId": "",
                                     "__collapse": true
                                 },
-                                "id": "7877be3b-6a6d-4ce7-bfd4-00d76fcce753"
+                                "id": "a9fb40d7-7503-4d3f-a0fb-91c28f641e1a"
                             },
                             {
                                 "command": "EVENT_VARIABLE_MATH_EVALUATE",
                                 "args": {
-                                    "variable": "50",
-                                    "expression": "$02$ - ($38$ / 2)",
+                                    "variable": "45",
+                                    "expression": "$02$ - ($14$ / 2)",
                                     "__collapse": true
                                 },
-                                "id": "981f7162-2aed-4261-ae87-a5f73d22a0de"
+                                "id": "1b286919-8df8-4788-b339-5756e61eafb7"
                             },
                             {
                                 "command": "EVENT_CAMERA_SHAKE",
@@ -10948,30 +11726,114 @@
                                     },
                                     "__collapse": true
                                 },
-                                "id": "56a17605-a4a0-4944-9b12-1db32110dfdc"
+                                "id": "37592b04-cb0d-4ea3-b394-145410e22990"
                             },
                             {
                                 "command": "EVENT_VARIABLE_MATH_EVALUATE",
                                 "args": {
-                                    "variable": "36",
-                                    "expression": "$36$ - $50$",
+                                    "variable": "13",
+                                    "expression": "$13$ - $45$",
                                     "__collapse": true
                                 },
-                                "id": "e618827e-c021-495b-8df0-bef521352ba5"
+                                "id": "874992ff-03e5-4b36-a0ec-6e96ad502242"
                             },
                             {
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "Amanda causó $50$ \npuntos de daño!"
+                                        "Amanda causó $45$ \npuntos de daño!"
                                     ],
                                     "avatarId": "",
                                     "__collapse": true
                                 },
-                                "id": "734dd15f-488f-4c84-8e83-8e95774bd78d"
+                                "id": "4c947f43-6a98-41d0-94c6-5e593be224f3"
                             }
                         ],
-                        "true1": [],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "1152ef82-a2c1-4312-b495-96b7be4a2884"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": false
+                                            },
+                                            "id": "02589772-7b5d-4196-8509-ffd9fc1ba993"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": false
+                                            },
+                                            "id": "c8ce7b3b-a255-4193-a2f1-ccf1404f2059"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "b671aebd-33c1-4b00-8775-9ea598c7d476"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "07dc3df2-49e5-4550-bb1a-b8950fe1010d"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "077fc84e-1fa8-4cf0-a97c-de151c422247"
+                            }
+                        ],
                         "true2": [],
                         "true3": [],
                         "true4": [],
@@ -10990,49 +11852,61 @@
                             {
                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                 "args": {
-                                    "customEventId": "3a259007-45e3-4d8d-9363-9cdf006ff91c"
+                                    "customEventId": "7d70d2db-356f-410f-abfc-66cdc239a3b8",
+                                    "__collapse": false
                                 },
-                                "id": "151c927b-29af-4070-b763-61bbb44c9d05"
+                                "id": "9d6976c9-1109-4245-9ace-5b580127f90a"
                             }
                         ]
                     },
-                    "id": "3909d57b-c563-4a8e-8d87-4fce8abb4df2"
-                }
-            ]
-        },
-        {
-            "id": "d3693fc2-6329-482e-a7dc-32eb290a77f9",
-            "name": "Turn_Enemy1",
-            "description": "",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_11",
-            "script": []
-        },
-        {
-            "id": "7d70d2db-356f-410f-abfc-66cdc239a3b8",
-            "name": "Turn_Amanda_Enemy2",
-            "description": "",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_12",
-            "script": [
+                    "id": "06a94d64-e561-407e-bc9d-3439ae67eac4"
+                },
                 {
-                    "command": "EVENT_SWITCH_SCENE",
+                    "command": "EVENT_IF",
                     "args": {
-                        "sceneId": "b6907cba-e1d1-44b6-9bfc-cd33f082b4c8",
-                        "x": {
-                            "type": "number",
-                            "value": 0
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "13"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
                         },
-                        "y": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "direction": "",
-                        "fadeSpeed": "2"
+                        "__collapseElse": true,
+                        "__collapse": true
                     },
-                    "id": "c17ea0ec-189c-46d8-87ef-60b1df23bc1b"
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda derrotó al\nenemigo!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "76f6a8fc-37a2-4bfd-b51a-c5cb0aab7013"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "8df6f9f3-1bb1-44d3-9c39-7b9584fc265a"
+                            }
+                        ]
+                    },
+                    "id": "04076fde-3d5b-4f1e-bc2f-b3daa90c32f0"
                 }
             ]
         },
@@ -11045,21 +11919,280 @@
             "symbol": "script_13",
             "script": [
                 {
-                    "command": "EVENT_SWITCH_SCENE",
+                    "command": "EVENT_MENU",
                     "args": {
-                        "sceneId": "b6907cba-e1d1-44b6-9bfc-cd33f082b4c8",
-                        "x": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "y": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "direction": "",
-                        "fadeSpeed": "2"
+                        "variable": "43",
+                        "items": 2,
+                        "option1": "Enfrentar",
+                        "option2": "Correr!",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "cancelOnLastOption": false,
+                        "__collapse": true
                     },
-                    "id": "fe75ca50-35f6-4e29-820f-08fd8e908a2c"
+                    "id": "ce6951b4-e02e-4b6a-abf2-6722381ac4ce"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "43",
+                        "choices": 2,
+                        "__collapseCase0": true,
+                        "value0": 1,
+                        "__collapseCase1": true,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda ataca al enemigo!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "da30d3ae-d2f9-476a-a734-4681d0349fbd"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "46",
+                                    "expression": "$02$ - ($15$ / 2)",
+                                    "__collapse": true
+                                },
+                                "id": "215ce615-2d56-45ce-bfc5-a464313cf366"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 0.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 3
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "b4f74717-b304-4fbe-bb0c-65e7e3b47394"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "16",
+                                    "expression": "$16$ - $46$",
+                                    "__collapse": true
+                                },
+                                "id": "2011a11c-59d5-4e79-9477-3383697285dd"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda causó $46$ \npuntos de daño!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "5a8d0561-fc60-42f3-9b5b-4ca871887a94"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "c3b2ee7d-dd33-475c-bb7f-4e9be4aad4a3"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": true
+                                            },
+                                            "id": "4fab3bd5-9985-468a-9963-7c8d1f94160c"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": false
+                                            },
+                                            "id": "0722bf4e-4124-4852-83f0-ee95bb075cd1"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "5a33864f-0913-4d69-9c21-4838d9471f4a"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "b78146e0-354f-44ff-ad8d-c255ea80d4f0"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "cca6830b-61a1-4623-8097-ef8699e5ec5d"
+                            }
+                        ],
+                        "true2": [],
+                        "true3": [],
+                        "true4": [],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "59d95245-77f3-4f67-b888-f1d2a735ef71",
+                                    "__collapse": false
+                                },
+                                "id": "ff6e9986-f622-4d07-a217-e54c6658e252"
+                            }
+                        ]
+                    },
+                    "id": "4acea24c-d618-47d3-83bc-e8977d65c2ce"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "16"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda derrotó al\nenemigo!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "046b3b32-c8e4-405d-b5e9-ce77abd3dead"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "2ec808de-6181-4e79-ad8f-f7c1b4a99ef8"
+                            }
+                        ]
+                    },
+                    "id": "a041b0c1-c8d7-4438-b064-65563a05832b"
                 }
             ]
         },
@@ -11072,21 +12205,279 @@
             "symbol": "script_14",
             "script": [
                 {
-                    "command": "EVENT_SWITCH_SCENE",
+                    "command": "EVENT_MENU",
                     "args": {
-                        "sceneId": "b6907cba-e1d1-44b6-9bfc-cd33f082b4c8",
-                        "x": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "y": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "direction": "",
-                        "fadeSpeed": "2"
+                        "variable": "43",
+                        "items": 2,
+                        "option1": "Enfrentar",
+                        "option2": "Correr!",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "cancelOnLastOption": false,
+                        "__collapse": true
                     },
-                    "id": "15c82776-d330-4697-8f9a-330550f9e8b4"
+                    "id": "c3505e85-4a83-4b52-8b83-e041e414dce2"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "43",
+                        "choices": 2,
+                        "__collapseCase0": true,
+                        "value0": 1,
+                        "__collapseCase1": true,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda ataca al enemigo!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "3272c362-7ba8-4601-aa2f-8f52fa54635a"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "47",
+                                    "expression": "$02$ - ($20$ / 2)",
+                                    "__collapse": true
+                                },
+                                "id": "1f227f4f-42db-46fe-ae9b-17e0cfe4b6a1"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 0.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 3
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "e042418f-3f0a-44df-b7e1-aefb5a42780c"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "21",
+                                    "expression": "$21$ - $47$",
+                                    "__collapse": true
+                                },
+                                "id": "578e7a84-578f-49b5-8db5-a548ed6ac4ef"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda causó $47$ \npuntos de daño!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "1e55d131-f771-4845-985a-41fd70d8c5bd"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "0b155e84-55d6-4e40-8498-9dca0026afbe"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": true
+                                            },
+                                            "id": "a728cd53-5f3d-4378-8e05-32d49d1b2e34"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": true
+                                            },
+                                            "id": "f4841b16-b62c-4450-9f9d-2f30f2f14cfc"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "efe5e6ab-9bf6-4f1d-a09f-b5ff726f878a"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": false
+                                },
+                                "id": "6299ff1c-de6b-47d2-b089-311bf9a0157a"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "e7c429c5-5cec-4240-adc3-13c51ca68354"
+                            }
+                        ],
+                        "true2": [],
+                        "true3": [],
+                        "true4": [],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "f5e5a170-c405-4d41-93b9-a281484cf773"
+                                },
+                                "id": "910bcda9-6c40-4ff3-b155-c3aa30b50fdb"
+                            }
+                        ]
+                    },
+                    "id": "b48f4bbf-4680-4a4d-91ac-801def3fe2c3"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "21"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda derrotó al\nenemigo!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "67567ff9-e61c-4c41-bcdb-1818f6dc321b"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "a45bd1fb-f8c3-4aca-beac-c03d0d41d4a8"
+                            }
+                        ]
+                    },
+                    "id": "541409f3-fdca-42e7-a5cd-09af05eecde2"
                 }
             ]
         },
@@ -11099,12 +12490,279 @@
             "symbol": "script_15",
             "script": [
                 {
-                    "command": "EVENT_TEXT",
+                    "command": "EVENT_MENU",
                     "args": {
-                        "text": "",
-                        "avatarId": ""
+                        "variable": "43",
+                        "items": 2,
+                        "option1": "Enfrentar",
+                        "option2": "Correr!",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "cancelOnLastOption": false,
+                        "__collapse": true
                     },
-                    "id": "979bb8fe-dec7-4092-b8ed-086b4e4e6d16"
+                    "id": "7a0ec2fc-6aed-4168-9a2c-0e46e5dff7fc"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "43",
+                        "choices": 2,
+                        "__collapseCase0": true,
+                        "value0": 1,
+                        "__collapseCase1": true,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda ataca al enemigo!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "d47838a3-b993-42eb-8148-d8093a397e8d"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "48",
+                                    "expression": "$02$ - ($25$ / 2)",
+                                    "__collapse": true
+                                },
+                                "id": "b03574e0-b2f4-4ee5-92fc-37e4af291c2c"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 0.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 3
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "983f294b-6750-4363-a18c-959b3cee36be"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "26",
+                                    "expression": "$26$ - $48$",
+                                    "__collapse": true
+                                },
+                                "id": "092ed44a-669d-4270-9a94-db8ff5fa5abb"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda causó $48$ \npuntos de daño!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "f156ef4b-d441-44f9-861d-4f52c4fe02fc"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "388b4736-c5f0-498e-af8a-c05d5b82eaf1"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": true
+                                            },
+                                            "id": "516360d8-b486-400e-8bf9-7cde983325f8"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": true
+                                            },
+                                            "id": "2e01a4bc-078f-4a1d-ae4d-c68c5a682348"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "cf99546e-13f5-4df3-a3f5-93c487ef8b0e"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "fc45012c-c360-4e7e-967a-8b560577eab6"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "6c404fac-cf92-462b-bcbf-b2025d178383"
+                            }
+                        ],
+                        "true2": [],
+                        "true3": [],
+                        "true4": [],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "d6b5472c-8c0a-4df8-a2d3-757940ce30d3"
+                                },
+                                "id": "63db57eb-de0e-4d8c-8ad5-7fa81babcbdb"
+                            }
+                        ]
+                    },
+                    "id": "26b77b5d-44ea-448b-b562-267bf695b33c"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "26"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda derrotó al\nenemigo!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "2124bc13-6212-4e93-b0c7-fe439ef8bb93"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "10ee0bb7-d98a-4d10-a56a-6b4562d6f798"
+                            }
+                        ]
+                    },
+                    "id": "54254ac9-b3df-4e0f-a65b-84deb0224cb0"
                 }
             ]
         },
@@ -11117,12 +12775,280 @@
             "symbol": "script_16",
             "script": [
                 {
-                    "command": "EVENT_TEXT",
+                    "command": "EVENT_MENU",
                     "args": {
-                        "text": "",
-                        "avatarId": ""
+                        "variable": "43",
+                        "items": 2,
+                        "option1": "Enfrentar",
+                        "option2": "Correr!",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue",
+                        "cancelOnLastOption": false,
+                        "__collapse": true
                     },
-                    "id": "4bc77acb-8e05-431a-b09d-f2567606a524"
+                    "id": "2980abe6-e441-4d92-8a99-79e245c4f8d4"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "43",
+                        "choices": 2,
+                        "__collapseCase0": true,
+                        "value0": 1,
+                        "__collapseCase1": true,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda ataca al enemigo!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "82463b4c-f3b1-4640-8016-fa0767d9f092"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "49",
+                                    "expression": "$02$ - ($30$ / 2)",
+                                    "__collapse": true
+                                },
+                                "id": "129647b0-fb4c-4974-91f2-8d5901ada043"
+                            },
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 0.5,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 3
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "e522a3d2-29ff-4424-b823-7c46f334dc8a"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "31",
+                                    "expression": "$31$ - $49$",
+                                    "__collapse": true
+                                },
+                                "id": "dd14495a-f41e-4c03-9235-167293096c90"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda causó $49$ \npuntos de daño!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "c62f7439-a4b7-47e5-bca3-baaba0bda6a4"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "52",
+                                    "value": {
+                                        "type": "rnd",
+                                        "value": {
+                                            "type": "number",
+                                            "value": 9
+                                        }
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "21972454-9e87-4794-b8c8-2635bfbc2dea"
+                            },
+                            {
+                                "command": "EVENT_IF",
+                                "args": {
+                                    "condition": {
+                                        "type": "lt",
+                                        "valueA": {
+                                            "type": "variable",
+                                            "value": "52"
+                                        },
+                                        "valueB": {
+                                            "type": "number",
+                                            "value": 2
+                                        }
+                                    },
+                                    "__collapseElse": true,
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Amanda intenta \nescapar...",
+                                                    "Pero no puede hacerlo."
+                                                ],
+                                                "avatarId": "",
+                                                "__collapse": true
+                                            },
+                                            "id": "739f1425-1d6e-47ac-8174-1266f7efe291"
+                                        },
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "42",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 2
+                                                },
+                                                "__collapse": true
+                                            },
+                                            "id": "db25d494-8cbc-4fb6-b495-8948e2059fe6"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "855994c9-7edf-4575-bb46-c13d7fb00489"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda intenta\nescapar...",
+                                        "Amanda logró escapar."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "80037d71-2e05-4384-b8f1-395c447ba6c3"
+                            },
+                            {
+                                "command": "EVENT_SCENE_POP_ALL_STATE",
+                                "args": {
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "5f0e47f6-12df-4bc9-a0ec-9d8b8a5f7f1e"
+                            }
+                        ],
+                        "true2": [],
+                        "true3": [],
+                        "true4": [],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "fb578623-87b7-49a5-8d43-54c76d87c3a2"
+                                },
+                                "id": "80a31e73-7bfd-440b-902c-a72c3ee8dbe3"
+                            }
+                        ]
+                    },
+                    "id": "9361bd48-3e8b-48f3-88d4-8fa01bcd2a3d"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "31"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda se abrió camino\nhacia la oscuridad."
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "615155b1-c467-40e9-9bc7-92faf644d3b3"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "2467f86f-888e-404e-92eb-21970e1741cd"
+                            }
+                        ]
+                    },
+                    "id": "28f0a179-deae-416b-93a5-86502b362f41"
                 }
             ]
         },
@@ -11192,7 +13118,7 @@
                         "__collapseCase15": false,
                         "value15": 16,
                         "__collapseElse": true,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true0": [
@@ -11251,7 +13177,41 @@
                                 "id": "7332dc8d-38d8-4869-b409-6e4a18b73c59"
                             }
                         ],
-                        "true1": [],
+                        "true1": [
+                            {
+                                "command": "EVENT_CAMERA_SHAKE",
+                                "args": {
+                                    "time": 1,
+                                    "frames": 30,
+                                    "shakeDirection": "horizontal",
+                                    "magnitude": {
+                                        "type": "number",
+                                        "value": 5
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "942d9079-ba7e-4fe4-af37-b1fca2593b03"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda no puede escapar\nde este combate!"
+                                    ],
+                                    "avatarId": "",
+                                    "__collapse": true
+                                },
+                                "id": "08ebee99-8053-4442-b85e-83c525c1c220"
+                            },
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "f6a515bb-c11f-4bff-a047-4bfd5aebadb7",
+                                    "__collapse": true
+                                },
+                                "id": "6f3030f0-9f9f-4d41-b079-adce40876dec"
+                            }
+                        ],
                         "true2": [],
                         "true3": [],
                         "true4": [],
@@ -11277,6 +13237,53 @@
                         ]
                     },
                     "id": "1cf1a38a-4ccf-4f62-8276-72141ab39825"
+                },
+                {
+                    "command": "EVENT_IF",
+                    "args": {
+                        "condition": {
+                            "type": "lte",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "36"
+                            },
+                            "valueB": {
+                                "type": "number",
+                                "value": 0
+                            }
+                        },
+                        "__collapseElse": true,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Amanda acabó con la \noscuridad."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "ec5662a8-952c-4275-a21e-179996152a88"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "42",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 2
+                                    },
+                                    "__collapse": false
+                                },
+                                "id": "f31bb3bc-16ca-443a-a95d-d998a5756e6b"
+                            }
+                        ]
+                    },
+                    "id": "869ee518-bda2-4541-b5cb-1acb3fdfe56d"
                 }
             ]
         },
@@ -11651,21 +13658,6 @@
             "symbol": "var_damageenemy1"
         },
         {
-            "id": "f0892ce3-56dd-4bcd-bb30-f6d7db31d7bc__L0",
-            "name": "Menu Choice",
-            "symbol": "var_menu_choice"
-        },
-        {
-            "id": "b24f97fb-60b7-43e9-a2ea-c0cccb0b75f9__L0",
-            "name": "Menu Choice",
-            "symbol": "var_menu_choice_0"
-        },
-        {
-            "id": "f0398fc9-6b8e-4f08-943f-8147d5468d84__L0",
-            "name": "Menu Choice",
-            "symbol": "var_menu_choice_1"
-        },
-        {
             "id": "45",
             "name": "DamageEnemy2",
             "symbol": "var_damageenemy2"
@@ -11694,6 +13686,31 @@
             "id": "50",
             "name": "DamageBoss",
             "symbol": "var_damageboss"
+        },
+        {
+            "id": "f0892ce3-56dd-4bcd-bb30-f6d7db31d7bc__L0",
+            "name": "Menu Choice",
+            "symbol": "var_menu_choice"
+        },
+        {
+            "id": "b24f97fb-60b7-43e9-a2ea-c0cccb0b75f9__L0",
+            "name": "Menu Choice",
+            "symbol": "var_menu_choice_0"
+        },
+        {
+            "id": "f0398fc9-6b8e-4f08-943f-8147d5468d84__L0",
+            "name": "Menu Choice",
+            "symbol": "var_menu_choice_1"
+        },
+        {
+            "id": "51",
+            "name": "Enemy4SPD",
+            "symbol": "var_enemy4spd"
+        },
+        {
+            "id": "52",
+            "name": "Dice",
+            "symbol": "var_dice"
         }
     ],
     "engineFieldValues": [
@@ -11713,7 +13730,7 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 48,
+        "worldScrollX": 1,
         "worldScrollY": 0,
         "zoom": 75,
         "sgbEnabled": false,
@@ -11742,9 +13759,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            198,
-            242,
-            205
+            30,
+            301,
+            314
         ],
         "showNavigator": true,
         "defaultFontId": "1ccd3719-247f-4ebd-bab6-0223636a67cd",
@@ -11772,7 +13789,8 @@
             "EVENT_MENU",
             "EVENT_SWITCH",
             "EVENT_CAMERA_SHAKE",
-            "EVENT_VARIABLE_MATH_EVALUATE"
+            "EVENT_VARIABLE_MATH_EVALUATE",
+            "EVENT_SCENE_POP_ALL_STATE"
         ],
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
